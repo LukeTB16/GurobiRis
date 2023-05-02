@@ -101,9 +101,6 @@ public class Main {
                 double objVal = model.get(GRB.DoubleAttr.ObjVal);
                 System.out.println("Valore ottimo della funzione obiettivo: " + objVal);
 
-                // Risoluzione
-                model.optimize();
-
                 // Verifica se la soluzione è degenerata
                 if (model.get(GRB.IntAttr.Status) == GRB.OPTIMAL) {
                     if (model.get(GRB.IntAttr.SolCount) > 1) {
